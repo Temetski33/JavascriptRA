@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eka esimerkkisivu</title>
+</head>
+<body>
+<h2>Eka javascript ohjelma</h2>
+<p>
+  Tassapa tekstia web sivulle<br>
+  Kehittajan salainen konsoli löytyy F12 nappaimella
+</p>
+
+<p id="tulostusalue"></p>
+
+<script>
+  'use strict';       // kaytetaan ns. tiukka moodia
+  let x = 3;          // esitellaan muuttuja x ja annetaan sille alkuarvo
+  x += 2;             // lol
+  x++;                // lol
+  console.log("x:n arvo on: " + x)
+
+  // prompt lukee kaikki arvot sisaan merkkijonona (myos numerot)
+  const nimi = prompt("Anna nimi: ")  // nimi on vakio, ei voi muuttaa
+  // etsitaan web sivulta kappale, jonka id on 'tulostusalue'
+  const alue = document.querySelector('#tulostusalue')
+  // tulostetaan tekstia web sivulle
+  alue.innerHTML = "Terve " + nimi + "!"
+
+  // luvut kannattaa luke +prompt(...) avulla
+  let eka = +prompt("Anna eka kokonaisluku: ");
+  let toka = +prompt("Anna toka kokonaisluku: ");
+  let summa = eka + toka
+  // tulostetaan saatu summa web sivulle
+  alue.innerHTML += "Lukujesi summa: " + summa
+</script>
+
+</body>
+</html>
