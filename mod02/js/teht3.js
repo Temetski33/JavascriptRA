@@ -1,12 +1,12 @@
 const tulostus =
     document.querySelector('#tulostusAlue')
 
-let toistot = +prompt("Anna osallistujien määrä: ")
+let toistot = 6
 let nimet = []
 
 for (let i = 0; i<toistot; i++) {
     let arvo =
-        prompt("Syötä osallistujan nimi: ")
+        prompt("Syötä koiran nimi: ")
     nimet.push(arvo)
 }
 
@@ -14,9 +14,11 @@ nimet.sort(function (a, b) {
     return a.toLowerCase().localeCompare(b.toLowerCase());
 });
 
-tulostus.innerHTML += `Tulostetaan nimet aakkosjärjestyksessä: <br>`
+nimet.reverse()
 
-const listContainer = document.querySelector("ol");
+tulostus.innerHTML += `Tulostetaan koirien nimet käänteisessä aakkosjärjestyksessä: <br>`
+
+const listContainer = document.querySelector("ul");
 
 let listItems;
 
